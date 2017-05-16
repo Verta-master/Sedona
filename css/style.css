@@ -4,4 +4,376 @@ body {
     line-height: 21px;
     color: #000000;
     text-transform: uppercase;
+    background-color: #f2f2f2;
+}
+
+.container {
+    margin: 0 40px;
+    width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 2px #323232;
+}
+
+.navigation-main {
+    list-style-type: none;
+    font-weight: bold;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 0;
+}
+
+.clearfix {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.navigation-main a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation-main li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navigation-main li:first-child,
+.navigation-main li:nth-child(2) {
+    text-align: left;
+    padding-left: 72px;
+    width: 168px;
+}
+
+.navigation-main li:nth-child(4),
+.navigation-main li:last-child {
+    text-align: right;
+    padding-right: 72px;
+    width: 168px;
+}
+
+.navigation-main li:nth-child(3) {
+    width: 240px;
+}
+
+header {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-69px);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.presentation {
+    position: relative;
+    background-color: #d9eaf1;
+    background-image: url(../img/background.jpg);
+    background-position: 0 -90px;
+    background-repeat: no-repeat;
+    width: 1200px;
+    min-height: 508px;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.presentation::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 57px;
+    width: 1200px;
+    background: url(../img/background-decoration.png) no-repeat center;
+}
+
+.presentation img {
+    display: block;
+    margin: auto;
+}
+
+.presentation-welcome {
+    padding-top: 73px;
+}
+
+.presentation-georgeous {
+    padding-top: 8px;
+    width: 176px;
+    margin: auto;
+    position: relative;
+}
+
+.presentation-georgeous::before,
+.presentation-georgeous::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 27px;
+    height: 2px;
+    background-color: #766357;
+}
+
+.presentation-georgeous::before {
+    left: -40px;
+}
+
+.presentation-georgeous::after {
+    right: -40px;
+}
+
+.presentation-sedona {
+    padding-top: 50px;
+}
+
+.presentation-slogan {
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 21px;
+    line-height: 26px;
+    width: 575px;
+    text-align: center;
+    margin: auto;
+    margin-top: 56px;
+    margin-bottom: 38px;
+    font-weight: bold;
+}
+
+p {
+    color: #333333;
+    width: 575px;
+    margin: auto;
+    margin-bottom: 57px;
+    text-align: center;
+}
+
+.text,
+.picture {
+    float: left;
+    height: 256px;
+}
+
+.text {
+    width: 400px;
+    box-sizing: border-box;
+    background-color: #81b3d2;
+    color: #ffffff;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.text h2,
+.icons h2,
+.benefits h2 {
+    display: block;
+    margin: auto;
+    font-size: 21px;
+    text-align: center;
+    width: 155px;
+}
+
+.text b {
+    margin: auto;
+    display: block;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 24px;
+    width: 310px;
+}
+
+.icons,
+.benefits {
+    float: left;
+    width: 400px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.icons {
+    min-height: 330px;
+}
+
+.icons h2 {
+    padding-top: 152px;
+}
+
+.icons b,
+.benefits b {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+    width: 290px; 
+    margin-top: 26px;
+}
+
+.icons-house,
+.icons-meal,
+.icons-gift {
+    position: relative;
+}
+
+.icons-house::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-37px);
+    width: 75px;
+    height: 72px;
+    background: url(../img/icon-1.png) no-repeat center;
+}
+
+.icons-meal::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-37px);
+    width: 74px;
+    height: 70px;
+    background: url(../img/icon-2.png) no-repeat center;    
+}
+
+.icons-gift::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-32px);
+    width: 64px;
+    height: 76px;
+    background: url(../img/icon-3.png) no-repeat center;    
+}
+
+.benefits {
+    background-color: #eeeeee;
+    min-height: 255px;
+}
+
+.benefits h2 {
+    margin-top: 47px;
+}
+
+.search b {
+    display: block;
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 53px;
+    margin-bottom: 33px;
+    text-align: center;
+}
+
+.search p {
+    margin-bottom: 52px;
+}
+
+.search a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    width: 570px;
+    background-color: #766357;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-main {
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 1200px;
+    min-height: 593px;
+    position: relative;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 0;
+    min-height: 120px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.hash,
+.social,
+.copyright {
+    float: left;
+    width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hash {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-top: 47px;
+}
+
+.copyright {
+    padding-top: 38px;
+}
+
+.copyright b {
+    font-weight: normal;
+}
+
+.copyright b,
+.copyright a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social {
+    font-size: 0;
+    padding-top: 35px;
+}
+
+.social-tw {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/sprite.png) no-repeat center;
+    width: 46px;
+    height: 48px;
+    background-position: -532px -5px;
+    margin-right: 6px;
+}
+
+.social-fb {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/sprite.png) no-repeat center;
+    width: 46px;
+    height: 48px;
+    background-position: -233px -5px;
+    margin-right: 6px;
+}
+
+.social-yt {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/sprite.png) no-repeat center;
+    width: 46px;
+    height: 48px;
+    background-position: -764px -5px;
 }
