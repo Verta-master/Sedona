@@ -92,8 +92,25 @@
         </main>
         
         <footer class="footer-main clearfix">
+            <form class="footer-search" action="search.php" method="post">
+                <label for="entry">Дата заезда:</label>
+                <input class="date" type="text" name="entry" id="entry" value="24 Апреля 2017">
+                <button class="calender" type="button">Календарь</button>
+                <label for="leave">Дата Выезда:</label>
+                <input class="date" type="text" name="leave" id="leave" value="4 июля 2017">
+                <button class="calender" type="button">Календарь</button>
+                <label for="adults">Взрослыe:</label>
+                <button class="minus-btn" type="button">Minus</button>
+                <input class="number" type="text" name="adults" id="adilts" value="2">
+                <button class="plus-btn" type="button">Plus</button>
+                <label for="kids">ДетИ:</label>
+                <button class="minus-btn" type="button">Minus</button>
+                <input class="number" type="text" name="kids" id="kids" value="0">
+                <button class="plus-btn" type="button">Plus</button>
+                <button class="search-btn" type="submit">НАЙТИ</button>
+            </form>
             <div class="footer-bottom">
-                <div class="hash">#VISITSEDONA</div>
+                <a href="#" class="hash">#VISITSEDONA</a>
                 <div class="social">
                     <a class="social-tw" href="#">Twitter</a>
                     <a class="social-fb" href="#">Facebook</a>

@@ -70,7 +70,6 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-69px);
-    cursor: pointer;
     z-index: 10;
 }
 
@@ -289,6 +288,7 @@ p {
     text-decoration: none;
     color: #ffffff;
     font-size: 21px;
+    font-weight: bold;
     line-height: 26px;
     padding-top: 29px;
     padding-bottom: 29px;
@@ -303,7 +303,7 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     width: 1200px;
-    min-height: 593px;
+    height: 593px;
     position: relative;
 }
 
@@ -328,6 +328,8 @@ p {
     line-height: 26px;
     font-weight: bold;
     margin-top: 47px;
+    text-decoration: none;
+    color: #000000;
 }
 
 .copyright {
@@ -376,4 +378,111 @@ p {
     width: 46px;
     height: 48px;
     background-position: -764px -5px;
+}
+
+.footer-search {
+    width: 570px;
+    height: 395px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px 2px #323232;
+    font-size: 0;
+    font-weight: bold;
+    padding: 54px;
+}
+
+.footer-search label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 26px;
+    width: 114px;
+}
+
+.footer-search label:last-of-type {
+    padding-left: 53px;
+    width: 61px;
+}
+
+.footer-search .date {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    width: 287px;
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    min-height: 26px;
+}
+
+.calender {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    margin-bottom: 30px;
+    background-color: #f2f2f2;
+    background-image: url(../img/sprite.png);
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff;
+    padding: 16px 195px;
+    background-color: #81b3d2;
+    outline: none;
+    border: none;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.minus-btn,
+.plus-btn,
+.number {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 30px;
+}
+
+.minus-btn {
+    background-image: url(../img/icon-minus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.plus-btn {
+    background-image: url(../img/icon-plus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.number {
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    height: 36px;
 }
