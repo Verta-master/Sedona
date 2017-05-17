@@ -24,7 +24,7 @@ body {
     font-size: 0;
 }
 
-.clearfix {
+.clearfix:after {
     display: table;
     clear: both;
     content: "";
@@ -314,6 +314,10 @@ p {
     background-color: rgba(255,255,255,0.9);
 }
 
+.footer-bottom:not(.footer-index) {
+    position: static;
+}
+
 .hash,
 .social,
 .copyright {
@@ -491,9 +495,13 @@ p {
     background-color: #3c739c;
     background-image: url(../img/background-filtered.jpg);
     background-position: 0 -90px;
-    padding: 32px 0;
+    padding-top: 32px;
     padding-left: 71px;
     padding-right: 74px;
+}
+
+.choice-form h2 {
+    margin: 0;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -510,9 +518,62 @@ p {
     float: right;
 }
 
+.choice-form-filter h2 {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.choice-form-filter b,
+.choice-form-filter button {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
 .choice-form label {
     font-size: 14px;
     font-weight: normal;
+    color: #ffffff;
+    line-height: 21px;
+}
+
+.choice-form input[type="checkbox"] {
+    display: none;
+}
+
+.choice-form input[type="checkbox"]+label {
+    display: block;
+    margin: 15px 0;
+    padding-left: 37px;
+    position: relative;
+    cursor: pointer;
+}
+
+.choice-form input[type="checkbox"]:checked+label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/sprite.png);
+    width: 26px;
+    height: 22px;
+    background-position: -161px -5px;
+}
+
+.choice-form input[type="checkbox"]:not(:checked)+label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    background-image: url(../img/sprite.png);
+    width: 26px;
+    height: 22px;
+    background-position: -700px -5px;
 }
 
 .hotels {
@@ -526,4 +587,160 @@ p {
     display: block;
     border-bottom: 1px solid #e5e5e5;
     padding: 30px 72px;
+}
+
+.hotel-list img,
+.hotel-status {
+    float: left;
+}
+
+.hotel-rate {
+    float: right;
+}
+
+.hotel-status {
+    margin-left: 30px;
+    width: 265px;
+}
+
+.hotel-status h2 {
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.hotel-status b {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    font-weight: normal;
+    width: 115px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.hotel-status a {
+    display: inline-block;
+    vertical-align: bottom;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0 16px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+}
+
+.hotel-details {
+    background-color: #81b3d2;
+}
+
+.hotel-booking {
+    background-color: #766357;
+}
+
+.hotel-rate b {
+    background-color: #f2f2f2;
+    color: #666666;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 14px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+}
+
+.hotel-stars {
+    font-size: 0;
+    margin-bottom: 46px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.hotel-list:first-child .hotel-stars {
+    background-image: url(../img/4-stars.png);
+}
+
+.hotel-list:nth-child(2) .hotel-stars {
+    background-image: url(../img/3-stars.png);
+}
+
+.hotel-list:last-child .hotel-stars {
+    background-image: url(../img/2-stars.png);
+}
+
+.found {
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.found-left {
+    float: left;
+}
+
+.found-right {
+    float: right;
+}
+
+.found-left b:first-of-type {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    width: 165px;
+}
+
+.found-left b:last-of-type,
+.found-left a {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+}
+
+.found-left a:not(.current) {
+    border-bottom: 1px dotted #81b3d2;
+    margin-left: 30px;
+}
+
+.found-left .current {
+    color: #81b3d2;
+    margin-left: 38px;
+}
+
+.arrow-up,
+.arrow-down {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.arrow-up {
+    background-image: url(../img/sprite.png);
+    width: 11px;
+    height: 10px;
+    background-position: -98px -5px;
+}
+
+.arrow-down {
+    background-image: url(../img/sprite.png);
+    width: 11px;
+    height: 10px;
+    background-position: -119px -5px;
+    transform: rotate(180deg);
+    margin-left: 10px;
 }
