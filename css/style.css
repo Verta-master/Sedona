@@ -486,3 +486,44 @@ p {
     text-align: center;
     height: 36px;
 }
+
+.choice-form {
+    background-color: #3c739c;
+    background-image: url(../img/background-filtered.jpg);
+    background-position: 0 -90px;
+    padding: 32px 0;
+    padding-left: 71px;
+    padding-right: 74px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+.choice-form-infra,
+.choice-form-housing {
+    float: left;
+    width: 254px;
+}
+
+.choice-form-filter {
+    float: right;
+}
+
+.choice-form label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.hotels {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+.hotel-list {
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 30px 72px;
+}
