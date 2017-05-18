@@ -508,17 +508,17 @@ p
     width: 113px;
     height: 39px;
 
-    background: #fff url(../img/logo-academy.png) no-repeat center;
+    background: transparent url(../img/logo-academy.png) no-repeat center;
 }
 
 .copyright a:hover
 {
-    background: #fff url(../img/logo-academy-blue.png) no-repeat center;
+    background: transparent url(../img/logo-academy-blue.png) no-repeat center;
 }
 
 .copyright a:active
 {
-    background: #fff url(../img/logo-academy-grey.png) no-repeat center;
+    background: transparent url(../img/logo-academy-grey.png) no-repeat center;
 }
 
 .social
