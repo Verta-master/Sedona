@@ -35,6 +35,18 @@ body {
     color: #000000;
 }
 
+.navigation-main a:hover:not(.current) {
+    color: #81b3d2;
+}
+
+.navigation-main a:active:not(.current) {
+    opacity: 0.3;
+}
+
+.navigation-main .current {
+    color: #766357;
+}
+
 .navigation-main li {
     display: inline-block;
     vertical-align: middle;
@@ -350,6 +362,21 @@ p {
     vertical-align: middle;
 }
 
+.copyright a {
+    font-size: 0;
+    background: #ffffff url(../img/logo-academy.png) no-repeat center;
+    width: 113px;
+    height: 39px;
+}
+
+.copyright a:hover {
+    background: #ffffff url(../img/logo-academy-blue.png) no-repeat center;
+}
+
+.copyright a:active {
+    background: #ffffff url(../img/logo-academy-grey.png) no-repeat center;
+}
+
 .social {
     font-size: 0;
     padding-top: 35px;
@@ -365,6 +392,14 @@ p {
     margin-right: 6px;
 }
 
+.social-tw:hover {
+    background-position: -644px -5px;
+}
+
+.social-tw:active {
+    background-position: -588px -5px;
+}
+
 .social-fb {
     display: inline-block;
     vertical-align: middle;
@@ -375,6 +410,14 @@ p {
     margin-right: 6px;
 }
 
+.social-fb:hover {
+    background-position: -347px -5px;
+}
+
+.social-fb:active {
+    background-position: -290px -5px;
+}
+
 .social-yt {
     display: inline-block;
     vertical-align: middle;
@@ -382,6 +425,14 @@ p {
     width: 46px;
     height: 48px;
     background-position: -764px -5px;
+}
+
+.social-yt:hover {
+    background-position: -876px -5px;
+}
+
+.social-yt:active {
+    background-position: -820px -5px;
 }
 
 .footer-search {
@@ -425,6 +476,7 @@ p {
     line-height: 26px;
     font-weight: bold;
     min-height: 26px;
+    box-sizing: border-box;
 }
 
 .calender {
@@ -443,6 +495,24 @@ p {
     cursor: pointer;
 }
 
+.footer-search .date:hover {
+    background-color: #ebebeb;
+}
+
+.footer-search .date:focus {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 4px 9px;
+}
+
+.calender:hover {
+    background-position: -60px 2px;
+}
+
+.calender:active {
+    background-position: -29px 2px;
+}
+
 .search-btn {
     font-size: 21px;
     line-height: 26px;
@@ -453,6 +523,16 @@ p {
     border: none;
     margin-top: 24px;
     cursor: pointer;
+    width: 100%;
+}
+
+.search-btn:hover {
+    background-color: #669ec0;
+}
+
+.search-btn:active {
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
 }
 
 .minus-btn,
@@ -475,11 +555,27 @@ p {
     cursor: pointer;
 }
 
+.minus-btn:hover {
+    background: #f2f2f2 url(../img/icon-minus-hover.png) no-repeat center;
+}
+
+.minus-btn:active {
+    background: #f2f2f2 url(../img/icon-minus-active.png) no-repeat center;
+}
+
 .plus-btn {
     background-image: url(../img/icon-plus.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+
+.plus-btn:hover {
+    background: #f2f2f2 url(../img/icon-plus-hover.png) no-repeat center;
+}
+
+.plus-btn:active {
+    background: #f2f2f2 url(../img/icon-plus-active.png) no-repeat center;
 }
 
 .number {
@@ -514,23 +610,120 @@ p {
     width: 254px;
 }
 
-.choice-form-filter {
+.filter-range {
     float: right;
+    width: 330px;
+    color: #ffffff;
 }
 
-.choice-form-filter h2 {
-    color: #ffffff;
+.filter-range-title {
+    margin-bottom: 9px;
+    font-weight: 600;
     font-size: 16px;
     line-height: 21px;
-    font-weight: bold;
 }
 
-.choice-form-filter b,
-.choice-form-filter button {
+.price-controls {
+    position: relative;
+    height: 36px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    font-size: 0;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 65px;
+    padding-top: 9px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.btn-transparent {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    font-size: 14px;
+    line-height: 20px;
     color: #ffffff;
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: normal;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-transparent:hover {
+    color: #000000;
+    background: #ffffff;
 }
 
 .choice-form label {
@@ -576,6 +769,20 @@ p {
     background-position: -700px -5px;
 }
 
+input[type="checkbox"]:checked:disabled + label:before {
+    background-image: url(../img/sprite.png);
+    width: 26px;
+    height: 22px;
+    background-position: -197px -5px;
+}
+
+input[type="checkbox"]:not(:checked):disabled + label:before {
+    background-image: url(../img/sprite.png);
+    width: 22px;
+    height: 22px;
+    background-position: -732px -5px;
+}
+
 .hotels {
     margin: 0;
     padding: 0;
@@ -603,13 +810,24 @@ p {
     width: 265px;
 }
 
-.hotel-status h2 {
+.hotel-name {
     display: block;
     font-size: 21px;
     line-height: 26px;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.hotel-name:hover {
+    color: #81b3d2;
+}
+
+.hotel-name:active {
+    color: rgba(0,0,0,0.3);
 }
 
 .hotel-status b {
@@ -624,7 +842,7 @@ p {
     margin-bottom: 10px;
 }
 
-.hotel-status a {
+.hotel-status a:not(.hotel-name) {
     display: inline-block;
     vertical-align: bottom;
     text-decoration: none;
@@ -641,8 +859,26 @@ p {
     background-color: #81b3d2;
 }
 
+.hotel-details:hover {
+    background-color: #669ec0;
+}
+
+.hotel-status a.hotel-details:active {
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
+}
+
 .hotel-booking {
     background-color: #766357;
+}
+
+.hotel-booking:hover {
+    background-color: #604e43;
+}
+
+.hotel-status a.hotel-booking:active {
+    background-color: #503e33;
+    color: rgba(255,255,255,0.3);
 }
 
 .hotel-rate b {
@@ -711,14 +947,25 @@ p {
     text-decoration: none;
 }
 
-.found-left a:not(.current) {
+.found-left a:not(.current-sorting) {
     border-bottom: 1px dotted #81b3d2;
     margin-left: 30px;
+    color: rgba(0,0,0,0.3);
 }
 
-.found-left .current {
+.found-left a:hover:not(.current-sorting) {
+    color: #81b3d2;
+}
+
+.found-left a:active:not(.current-sorting) {
+    color: #000000;
+    border-bottom: none;
+}
+
+.found-left .current-sorting {
     color: #81b3d2;
     margin-left: 38px;
+    cursor: default;
 }
 
 .arrow-up,
@@ -729,7 +976,8 @@ p {
     cursor: pointer;
 }
 
-.arrow-up {
+.arrow-up,
+.arrow-down {
     background-image: url(../img/sprite.png);
     width: 11px;
     height: 10px;
@@ -737,10 +985,29 @@ p {
 }
 
 .arrow-down {
+    transform: rotate(180deg);
+}
+
+.arrow-up:hover:not(.current-arrow),
+.arrow-down:hover:not(.current-arrow) {
+    width: 11px;
+    height: 10px;
+    background-position: -140px -5px;
+}
+
+.arrow-up:active:not(.current-arrow),
+.arrow-down:active:not(.current-arrow) {
+    width: 11px;
+    height: 10px;
+    background-position: -119px -5px;
+}
+
+.current-arrow {
     background-image: url(../img/sprite.png);
     width: 11px;
     height: 10px;
     background-position: -119px -5px;
     transform: rotate(180deg);
     margin-left: 10px;
+    cursor: default;
 }
