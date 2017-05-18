@@ -13,7 +13,7 @@ body
 .container
 {
     width: 1200px;
-    margin: 0 40px;
+    margin: 0 auto;
 
     background-color: #fff;
     box-shadow: 0 0 15px 2px #323232;
@@ -483,6 +483,14 @@ p
     color: #000;
 }
 
+.hash:hover {
+    color: #81b3d2;
+}
+
+.hash:active {
+    opacity: .3;
+}
+
 .copyright
 {
     padding-top: 42px;
@@ -662,6 +670,7 @@ p
     font-size: 14px;
     font-weight: bold;
     line-height: 26px;
+    text-transform: uppercase;
 
     display: inline-block;
 
