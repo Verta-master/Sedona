@@ -4,7 +4,7 @@ var close = popup.querySelector(".search-form-btn");
 
 link.addEventListener("click", function(event) {
     event.preventDefault();
-    popup.classList.add("footer-search-show");
+    popup.classList.toggle("footer-search-show");
 });
 
 close.addEventListener("click", function(event) {
